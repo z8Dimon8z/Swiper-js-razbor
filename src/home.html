@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-        <img src="img/cover.jpg" alt="">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		<!-- @@include('html/_popup.htm',{}) -->
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <!-- Оболочка слайдера -->
+      <div class="page__slider swiper">
+        <!-- Двигающееся часть слайдера -->
+        <div class="page__wrapper swiper-wrapper">
+
+          <!-- Слайд -->
+          <div class="page__slide swiper-slide">
+            <div class="page__slide-wpap">
+              <img class="page__slide-img" src="img/swiper-img/1.jpg" alt="картинка природы">
+            </div>
+          </div>
+
+          <!-- Слайд -->
+          <div class="page__slide swiper-slide">
+            <div class="page__slide-wpap">
+              <img class="page__slide-img" src="img/swiper-img/2.jpg" alt="картинка природы">
+            </div>
+          </div>
+
+          <!-- Слайд -->
+          <div class="page__slide swiper-slide">
+            <div class="page__slide-wpap">
+              <img class="page__slide-img" src="img/swiper-img/3.jpg" alt="картинка природы">
+            </div>
+          </div>
+
+          <!-- Слайд -->
+          <div class="page__slide swiper-slide">
+            <div class="page__slide-wpap">
+              <img class="page__slide-img" src="img/swiper-img/4.jpg" alt="картинка природы">
+            </div>
+          </div>
+
+          <!-- Слайд -->
+          <div class="page__slide swiper-slide">
+            <div class="page__slide-wpap">
+              <img class="page__slide-img" src="img/swiper-img/5.jpg" alt="картинка природы">
+            </div>
+          </div>
+
+          <!-- Слайд -->
+          <div class="page__slide swiper-slide">
+            <div class="page__slide-wpap">
+              <img class="page__slide-img" src="img/swiper-img/6.jpg" alt="картинка природы">
+            </div>
+          </div>
+        </div>
+        <!-- Если нужна пагинация -->
+        <div class="swiper-pagination"></div>
+        <!-- Если нужна навигация (влево/вправо) -->
+        <button type="button" class="swiper-button-prev"></button>
+        <button type="button" class="swiper-button-next"></button>
+        <!-- Если нужен скролбар -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  <!-- @@include('html/_popup.htm',{}) -->
+  @@include('html/_js.htm',{})
+</body>
+
 </html>

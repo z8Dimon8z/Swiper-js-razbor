@@ -1,5 +1,51 @@
 //====================================================================================================
-.wrapper{
+.wrapper {
   background-color: #000;
 }
+
 //====================================================================================================
+
+.page {
+
+  /* .page__slider */
+
+  &__slider {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  /* .page__wrapper */
+
+  &__wrapper {}
+
+  /* .page__slide */
+
+  &__slide {}
+
+  /* .page__slide-wpap */
+
+  &__slide-wpap {}
+
+  /* .page__slide-img */
+
+  &__slide-img {
+    text-align: center; 
+    // картинка по центру
+    max-width: 100%;
+    // встраивание картинки в ширину обертки
+  }
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-pagination {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
+
+.swiper-scrollbar {}

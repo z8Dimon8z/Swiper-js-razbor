@@ -9,7 +9,7 @@
 // Пример: { Navigation, Autoplay }
 // import Swiper, { Navigation } from 'swiper';
 import Swiper from 'swiper';
-import { Navigation} from 'swiper/modules';
+import { Navigation, Pagination} from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -34,7 +34,7 @@ function initSliders() {
 		new Swiper('.swiper', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -58,12 +58,30 @@ function initSliders() {
 			*/
 
 			// Пагинация
-			/*
+		
 			pagination: {
 				el: '.swiper-pagination',
-				clickable: true,
+        /*
+				clickable: true, // клики на погинацию
+        // Динамические булеты
+        dynamicBullets: true, // точки изменяют свой размер в зависимомти от активной точки
+
+        // Кастомные булеты
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
+        */
+      //  фракция (числа переключаются 1/6)
+      type: 'fraction',
+      // кастомные фракции (к цифрам бобавил несколько слов)
+      renderFraction: function (currentClass, totalClass) {
+        console.log(totalClass);
+        return 'Фото <span class="' + currentClass + '"></span>' + 
+        ' из ' + 
+        '<span class="' + totalClass + '"></span>';
+      },
 			},
-			*/
+		
 
 			// Скроллбар
 			/*
@@ -73,9 +91,9 @@ function initSliders() {
 			},
 			*/
 
-			// Кнопки "влево/вправо"
+			// Кнопки "влево/вправо" стрелки
 			navigation: {
-				prevEl: '.swiper-button-prev',
+				prevEl: '.swiper-button-prev', // тут можно указывать любые объекты и классы и их уже настраивать
 				nextEl: '.swiper-button-next',
 			},
 

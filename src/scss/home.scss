@@ -10,13 +10,15 @@
   /* .page__slider */
 
   &__slider {
-    padding-top: 30px;
-    padding-bottom: 70px;
+    
   }
 
   /* .page__wrapper */
 
-  &__wrapper {}
+  &__wrapper {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
 
   /* .page__slide */
 
@@ -42,10 +44,34 @@
 
 .swiper-slide {}
 
-.swiper-pagination {}
+// пагинация
+.page__slider .swiper-pagination {
+  bottom: 0;
+}
 
-.swiper-button-prev {}
+// булеты
+.page__slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+}
 
-.swiper-button-next {}
+// фракции  (числа переключаются 1/6)
+.page__slider .swiper-pagination-fraction{
+  font-size: 20px;
+  color: #fff;
+}
+
+// стрелки
+.page__slider .swiper-button-prev::after,
+.page__slider .swiper-button-next::after{
+  // изменение цвета и размера стрелок
+  color: #fff;
+  background-color: red;
+  font-size: 80px;
+}
 
 .swiper-scrollbar {}

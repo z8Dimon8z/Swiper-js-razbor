@@ -1,6 +1,6 @@
 //====================================================================================================
 .wrapper {
-  background-color: #000;
+  background-color: #787373;
 }
 
 //====================================================================================================
@@ -35,6 +35,8 @@
     // картинка по центру
     max-width: 100%;
     // встраивание картинки в ширину обертки
+    width: 500px;
+    height: 500px;
   }
 }
 
@@ -63,11 +65,18 @@
 .page__slider .swiper-pagination-fraction{
   font-size: 20px;
   color: #fff;
+  margin-bottom: 20px;
 }
 
 // прогрессбар
 .page__slider .swiper-pagination-progressbar-fill {
   background-color: #097b2f !important;
+}
+
+// скрол
+.page__slider .swiper-scrollbar-drag {
+  background-color: #c50d0d;
+  cursor: pointer;
 }
 
 // стрелки
@@ -79,4 +88,5 @@
   font-size: 80px;
 }
 
-.swiper-scrollbar {}
+.swiper-scrollbar {
+}

@@ -9,7 +9,7 @@
 // Пример: { Navigation, Autoplay }
 // import Swiper, { Navigation } from 'swiper';
 import Swiper from 'swiper';
-import { Navigation, Pagination} from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar} from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -34,7 +34,7 @@ function initSliders() {
 		new Swiper('.swiper', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, Scrollbar],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -42,8 +42,12 @@ function initSliders() {
 			autoHeight: true,
 			speed: 800,
 
-			//touchRatio: 0,
-			//simulateTouch: false,
+			simulateTouch: true, //false отключение претаскивания сслайда на ПК
+			touchRatio: 1, // Чуствительность свайпа
+      touchAngle: 45, // угол срабатывания свайпа
+      grabCursor: true, // курсор претаскивания
+
+
 			//loop: true,
 			//preloadImages: false,
 			//lazy: true,
@@ -72,7 +76,7 @@ function initSliders() {
         }
         */
       //  фракция (числа переключаются 1/6)
-      /*
+      
       type: 'fraction',
       // кастомные фракции (к цифрам бобавил несколько слов)
       renderFraction: function (currentClass, totalClass) {
@@ -81,20 +85,19 @@ function initSliders() {
         ' из ' + 
         '<span class="' + totalClass + '"></span>';
       },
-      */
     //  прогресбар
-     type: 'progressbar',
-     
+    //  type: 'progressbar',
 			},
 		
 
 			// Скроллбар
-			/*
+			
 			scrollbar: {
 				el: '.swiper-scrollbar',
+        // возможность перетаскивать скролл
 				draggable: true,
 			},
-			*/
+			
 
 			// Кнопки "влево/вправо" стрелки
 			navigation: {

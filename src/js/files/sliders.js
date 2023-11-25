@@ -72,6 +72,7 @@ function initSliders() {
         }
         */
       //  фракция (числа переключаются 1/6)
+      /*
       type: 'fraction',
       // кастомные фракции (к цифрам бобавил несколько слов)
       renderFraction: function (currentClass, totalClass) {
@@ -80,6 +81,10 @@ function initSliders() {
         ' из ' + 
         '<span class="' + totalClass + '"></span>';
       },
+      */
+    //  прогресбар
+     type: 'progressbar',
+     
 			},
 		
 

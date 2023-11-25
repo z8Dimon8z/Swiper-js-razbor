@@ -65,6 +65,11 @@
   color: #fff;
 }
 
+// прогрессбар
+.page__slider .swiper-pagination-progressbar-fill {
+  background-color: #097b2f !important;
+}
+
 // стрелки
 .page__slider .swiper-button-prev::after,
 .page__slider .swiper-button-next::after{

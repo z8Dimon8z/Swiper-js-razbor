@@ -50,9 +50,9 @@ function initSliders() {
       // Подключаем модули слайдера
       // для конкретного случая
       modules: [Navigation, Pagination, Scrollbar, HashNavigation, Keyboard, Mousewheel, Autoplay, EffectFlip],
-      // observer: true,
-      // observeParents: true,
-      slidesPerView: 
+      // observer: true, // обновление слайдера при изменении элементов
+      // observeParents: true, // обновление при изменении родительских элементов
+      slidesPerView:  
       4,   // количество слайдов на странице для показа (можно выводить не целое количество слайдов например 2,5) auto автоширина (ширина слайда формируется самим контентом)
       spaceBetween: 30, // отступы между слайдами
       autoHeight: false, // автовысота (высота слайдера подстраивается под высоту контента)

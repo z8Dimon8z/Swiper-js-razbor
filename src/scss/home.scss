@@ -36,7 +36,7 @@
     max-width: 100%;
     // встраивание картинки в ширину обертки
     width: 500px;
-    height: 500px;
+    // height: 500px;
   }
 }
 
@@ -48,7 +48,7 @@
 
 // пагинация
 .page__slider .swiper-pagination {
-  bottom: 0;
+  bottom: 0px;
 }
 
 // булеты
@@ -90,3 +90,25 @@
 
 .swiper-scrollbar {
 }
+// автоширина
+.page__slider .swiper-slide{
+  width: auto;
+}
+// мультирядность
+/*
+.page__slider{
+   height: 1500px;
+ }
+ .page__slider .swiper-slide{
+   height: calc((100% - 30px) / 2);
+   overflow: hidden;
+ }
+ */
+
+//  вертикальный слайдер
+/*
+.page__slider{
+   height: 700px;
+   padding: 0px 0px 0px 0px;
+ }
+ */
